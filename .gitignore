@@ -162,3 +162,7 @@ cython_debug/
 # repositories
 tmp
 !tmp/.keep
+
+# graph visualization
+graph
+graph.png
