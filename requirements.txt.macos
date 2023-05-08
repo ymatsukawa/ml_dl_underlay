@@ -1,5 +1,6 @@
 keras
 matplotlib
+mglearn
 numpy
 pandas
 scikit-learn
