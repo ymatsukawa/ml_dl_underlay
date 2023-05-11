@@ -4,6 +4,7 @@ import pandas as pd
 
 from sklearn.model_selection import train_test_split
 from tensorflow import keras
+from tensorflow.keras.layers import Dense
 
 df = pd.read_csv('DL_tf_linear_basic/data.csv')
 
