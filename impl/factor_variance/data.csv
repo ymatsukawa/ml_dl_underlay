@@ -1,0 +1,13 @@
+id,email,department,sale_type,cancel
+1,me@test.example.com,software,agA,1
+1,me@test.example.com,hardware,agA,1
+1,me@test.example.com,design,agA,1
+2,hi@example.com,,,1
+3,nop@example.com,hardware,,1
+4,yup@g.example.com,,agB,2
+5,x@test.example.com,,agC,2
+6,t@test.example.com,,,2
+7,tel@t.example.com,,agC,1
+8,d@d.example.com,design,agC,1
+9,no@n.example.com,,,2
+10,nof@f.example.com,,,2
