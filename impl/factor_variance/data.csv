@@ -11,3 +11,5 @@ id,email,department,sale_type,cancel
 8,d@d.example.com,design,agC,1
 9,no@n.example.com,,,2
 10,nof@f.example.com,,,2
+11,a@a.example.com,software,,1
+11,a@a.example.com,hardware,,1

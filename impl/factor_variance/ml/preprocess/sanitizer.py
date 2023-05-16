@@ -1,4 +1,4 @@
-from constant import exclude_domains
+from ml.constant import exclude_domains
 
 class Sanitizer:
   _EXCLUDE_DOMAINS = [
@@ -13,10 +13,7 @@ class Sanitizer:
     return d
 
   """
-    exclude below email domain
-      # testing domain
-      @example.com
-      @g.example.com
+    exclude email, domain included _EXCLUDE_DOMAINS
   """
   @classmethod
   def _exclude_by_email_domain(cls, data):

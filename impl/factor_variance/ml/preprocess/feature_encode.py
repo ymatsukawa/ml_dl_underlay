@@ -1,5 +1,7 @@
 import pandas as pd
 
+from ml.analyze.plots import Plot
+
 class FeatureEncode:
   _DEPARTMENT_LABEL = {
     None       : -1,
@@ -16,13 +18,16 @@ class FeatureEncode:
   }
 
   @classmethod
-  def new_feature(cls, data):
-    sale_type = cls._label_sale_type(data)
-    department = cls._label_department(data)
+  def get_featured(cls, data):
+    new_sale_type = cls._label_sale_type(data)
+    new_department = cls._label_department(data)
 
-    # TODO: PCA?
-    print(sale_type)
-    print(department)
+    data.loc[:, 'sale_type'] = new_sale_type
+    data.loc[:, 'department'] = new_department
+    # --- for debug
+    # print(data)
+    # Plot.simple(new_sale_type, new_department, xlegend='sale', ylegend='department', xlabel='sale', ylabel='department')
+    return data
 
   @classmethod
   def _label_department(cls, data):

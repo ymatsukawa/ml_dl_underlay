@@ -1,10 +1,17 @@
-from preprocess import Preprocess
+from ml.preprocess.load_data import Loader
+from ml.core.model import Model
 
+
+
+
+exit
 
 # preprocess
-prep = Preprocess("impl/factor_variance/data.csv")
-x_train, x_test, y_train, y_test = prep.prepare()
+loader = Loader("impl/factor_variance/data.csv")
+x_train, x_test, y_train, y_test = loader.load()
 
-# classify by 'k-learn'
+# fit and predict by model
+model = Model()
+model.fit(x_train, y_train)
 
-# plots
+model.predict(x_test)
