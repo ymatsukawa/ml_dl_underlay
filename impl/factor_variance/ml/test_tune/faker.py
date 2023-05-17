@@ -9,7 +9,7 @@ def make_fake(path_to_write):
   with open(path_to_write, 'w') as f:
     writer = csv.writer(f)
     writer.writerow(['id', 'email', 'department', 'sale_type', 'cancel'])
-    
+
     for index in range(3000):
       email = _define_email(fake)
       cancel = random.choice(td['cancel'])
