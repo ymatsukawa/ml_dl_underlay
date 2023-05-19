@@ -1,14 +1,20 @@
 from ml.preprocess.load_data import Loader
 from ml.core.model import Model
-from ml.analyze.matrix import Categorize
+from ml.preprocess.matrix import Matrix
 
-
+from ml.analyze.plots import Plot
 
 # preprocess
-loader = Loader("impl/factor_variance/data.csv")
-x_train, x_test, y_train, y_test = loader.load()
+loader = Loader("impl/factor_variance/testing.csv")
+# x_train, x_test, y_train, y_test = loader.load()
+data = loader.load_data()
 
-cx = Categorize.cat(x_train, y_train)
+cancle_counted = Matrix.data_for_cancel(data)
+
+Plot.linear(
+  x=cancle_counted['department'], y=cancle_counted['cancel'],
+  xlabel='department', ylabel='cancel'
+)
 
 # fit and predict by model
 """
